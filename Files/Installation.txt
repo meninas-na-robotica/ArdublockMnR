@@ -1,0 +1,25 @@
+
+1. Распакуйте архив ArduBlock.zip в корень диска С!
+     Путь к файлу: C:\ArduBlock
+
+2. Установка ttl драйвера CH341
+     Путь к файлу: C:\ArduBlock\Files\CH341S64\SETUP.EXE
+
+3. Установка ttl драйвера CP210
+     Путь к файлу: C:\ArduBlock\Files\CP210\CP210xVCPInstaller_x64.exe
+ 
+3. Запуск приложения ArduBlock 3.0
+     Путь к файлу: C:\ArduBlock\ArduBlock.exe
+
+
+Если не сохраняется проект в формате .ardublock или перестал загружаться то
+
+1. Добавьте программу в избранные антивируса или защитника!
+2. Очистите кеш. Удалите папку O++ ArduBlock
+ 
+
+      Путь к папке: C:\Users\имя-пользователя\AppData\Roaming\O++ ArduBlock
+
+ 
+1. Получить последнее обновление программы 
+     Путь к файлу: C:\ArduBlock\ArduBlock New.cmd
