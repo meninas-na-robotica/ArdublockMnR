@@ -1,0 +1,85 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <toolbox>toolbox_arduino_all</toolbox>
+  <block type="arduino_setup" id="setup_block" x="20" y="20">
+  </block>
+  <block type="arduino_loop" id="loop_block" x="20" y="80">
+    <statement name="MyLoop">
+      <block type="inout_digital_write" id="write_pin_2_high">
+        <field name="PIN">2</field>
+        <value name="STAT">
+          <shadow type="logic_boolean" id="logic_true_1">
+            <field name="BOOL">TRUE</field>
+          </shadow>
+        </value>
+        <next>
+          <block type="inout_digital_write" id="write_pin_3_high">
+            <field name="PIN">3</field>
+            <value name="STAT">
+              <shadow type="logic_boolean" id="logic_true_2">
+                <field name="BOOL">TRUE</field>
+              </shadow>
+            </value>
+            <next>
+              <block type="inout_digital_write" id="write_pin_4_high">
+                <field name="PIN">4</field>
+                <value name="STAT">
+                  <shadow type="logic_boolean" id="logic_true_3">
+                    <field name="BOOL">TRUE</field>
+                  </shadow>
+                </value>
+                <next>
+                  <block type="base_delay" id="delay_2000ms_1">
+                    <value name="DELAY_TIME">
+                      <shadow type="math_number" id="delay_2000_1">
+                        <field name="NUM">2000</field>
+                      </shadow>
+                    </value>
+                    <next>
+                      <block type="inout_digital_write" id="write_pin_2_low">
+                        <field name="PIN">2</field>
+                        <value name="STAT">
+                          <shadow type="logic_boolean" id="logic_false_1">
+                            <field name="BOOL">FALSE</field>
+                          </shadow>
+                        </value>
+                        <next>
+                          <block type="inout_digital_write" id="write_pin_3_low">
+                            <field name="PIN">3</field>
+                            <value name="STAT">
+                              <shadow type="logic_boolean" id="logic_false_2">
+                                <field name="BOOL">FALSE</field>
+                              </shadow>
+                            </value>
+                            <next>
+                              <block type="inout_digital_write" id="write_pin_4_low">
+                                <field name="PIN">4</field>
+                                <value name="STAT">
+                                  <shadow type="logic_boolean" id="logic_false_3">
+                                    <field name="BOOL">FALSE</field>
+                                  </shadow>
+                                </value>
+                                <next>
+                                  <block type="base_delay" id="delay_2000ms_2">
+                                    <value name="DELAY_TIME">
+                                      <shadow type="math_number" id="delay_2000_2">
+                                        <field name="NUM">2000</field>
+                                      </shadow>
+                                    </value>
+                                  </block>
+                                </next>
+                              </block>
+                            </next>
+                          </block>
+                        </next>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </statement>
+  </block>
+</xml>

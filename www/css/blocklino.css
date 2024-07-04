@@ -18,7 +18,7 @@ body {
 
 .blocklyToolboxDiv::-webkit-scrollbar-thumb {
   border-radius: 1px;
-   background-color:  #20666b;
+   background-color:  #74254f;
 }
 
 
@@ -247,7 +247,7 @@ body {
     max-height: 80px
 }
 .blocklyScrollbarKnob {
-  fill: #2d2d64 !important;
+  fill: #60234d !important;
   fill-opacity: 0.7 !important
 }
 .blocklyScrollbarBackground {

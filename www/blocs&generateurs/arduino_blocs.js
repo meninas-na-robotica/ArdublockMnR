@@ -13,7 +13,7 @@ Blockly.Blocks['ESPBOY-1']={init:function(){
     this.setNextStatement(true);
     this.setColour("#00929f");
     //this.setTooltip('help Vitaliy...');
-    //this.setHelpUrl('http://ardublock.ru/wiki')
+    this.setHelpUrl('http://ardublock.ru/wiki')
   }
 };
 Blockly.Blocks["ESPBOY-actuator_tonedure"] = {
@@ -1454,7 +1454,7 @@ Blockly.Blocks["base_define_while"]={
     .appendField(Blockly.Msg.base_define_while) 
     this.appendValueInput("variable1", "Number");
   this.appendDummyInput()
-    .appendField(new Blockly.FieldDropdown([['=',"=="],['� ',"!="],['<',"<"],['≤',"<="],['>',">"],['≥',">="]]), "SPEED"); 
+    .appendField(new Blockly.FieldDropdown([['=',"=="],['� ',"!="],['<',"<"],['≤',"<="],['>',">"],['≥',">="]]), "SPEED"); 
     //.appendField(new Blockly.FieldDropdown([['0', "0"], ['1', "1"], ['2', "2"],['3', "3"],['4', "4"],['5', "5"],['6', "6"],['7', "7"],['8', "8"],['9', "9"]]), "SPEED");  
   this.appendDummyInput() 
     this.appendValueInput("variable2", "Number");
@@ -1475,7 +1475,7 @@ Blockly.Blocks["base_define_while_do"]={
     .appendField(Blockly.Msg.base_define_while) 
     this.appendValueInput("variable1", "Number");
   this.appendDummyInput()
-    .appendField(new Blockly.FieldDropdown([['=',"=="],['� ',"!="],['<',"<"],['≤',"<="],['>',">"],['≥',">="]]), "SPEED"); 
+    .appendField(new Blockly.FieldDropdown([['=',"=="],['� ',"!="],['<',"<"],['≤',"<="],['>',">"],['≥',">="]]), "SPEED"); 
     //.appendField(new Blockly.FieldDropdown([['0', "0"], ['1', "1"], ['2', "2"],['3', "3"],['4', "4"],['5', "5"],['6', "6"],['7', "7"],['8', "8"],['9', "9"]]), "SPEED");  
   this.appendDummyInput() 
     this.appendValueInput("variable2", "Number");

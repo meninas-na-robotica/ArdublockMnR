@@ -1,47 +1,127 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-	<link rel="icon" type="image/png" href="media/icon.png" />
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<title>ArduBlock 3.0</title>
-	<!-- JavaScript -->
-	<script type="text/javascript" src="js/blockly.min.js"></script>
-	<script type="text/javascript" src="js/type.js"></script>
-	<script type="text/javascript" src="js/types.js"></script>
-	<script type="text/javascript" src="js/typings.js"></script>
-	<script type="text/javascript" src="js/generate_python.js"></script>
-	<script type="text/javascript" src="js/generate_cpp.js"></script>
-	<script type="text/javascript" src="js/blocklino.js"></script>
-	<script type="text/javascript" src="js/boards.js"></script>
-	<script src="js/jquery.min.2.1.3.js" onload="window.$ = window.jQuery = module.exports;"></script>
-	<script type="text/javascript" src="js/bootstrap.toggle.min.js"></script>
-	<script type="text/javascript" src="js/bootstrap.min.3.3.6.js"></script>
-	<script type="text/javascript" src="js/prettify.min.js"></script>
-	<script type="text/javascript" src="blocs&generateurs/blockly_blocs.js"></script>
-	<script type="text/javascript" src="blocs&generateurs/arduino_blocs.js"></script>
-	<script type="text/javascript" src="blocs&generateurs/arduino_generateurs_cpp.js"></script>
-	<script type="text/javascript" src="blocs&generateurs/arduino_generateurs_python.js"></script>
-	<script type="text/javascript" src="blocs&generateurs/blockly_generateurs_cpp.js"></script>
-	<script type="text/javascript" src="blocs&generateurs/blockly_generateurs_python.js"></script>
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="media/icon.png" />
+    
+    <!-- Meta Tags -->
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>ArduBlock 3.0</title>
 
-	<script type="text/javascript" src="js/typing.js"></script>
-	<script type="text/javascript" src="lang/code.js"></script>
-	<script type="text/javascript" src="js/hexlify.js"></script>
-	<script type="text/javascript" src="js/intel-hex.browser.js"></script>
-	<script type="text/javascript" src="js/ace.js"></script>
-	<script type="text/javascript" src="js/ext-language_tools.js"></script>
-	<!-- CSS -->
-	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.3.3.6.css"/>
-	<link rel="stylesheet" type="text/css" href="css/bootstrap.toggle.min.css"/>
-	<link rel="stylesheet" type="text/css" href="css/blocklino.css"/>
-	<link rel="stylesheet" type="text/css" href="css/prettify.min.css"/>
+    <!-- JavaScript -->
+    <script type="text/javascript" src="js/blockly.min.js"></script>
+    <script src="examples/appp.js"></script> <!-- Certifique-se de que o caminho está correto -->
+    <script type="text/javascript" src="js/type.js"></script>
+    <script type="text/javascript" src="js/types.js"></script>
+    <script type="text/javascript" src="js/typings.js"></script>
+    <script type="text/javascript" src="js/generate_python.js"></script>
+    <script type="text/javascript" src="js/generate_cpp.js"></script>
+    <script type="text/javascript" src="js/blocklino.js"></script>
+    <script type="text/javascript" src="js/boards.js"></script>
+    <script src="js/jquery.min.2.1.3.js" onload="window.$ = window.jQuery = module.exports;"></script>
+    <script type="text/javascript" src="js/bootstrap.toggle.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.3.3.6.js"></script>
+    <script type="text/javascript" src="js/prettify.min.js"></script>
+    <script type="text/javascript" src="blocs&generateurs/blockly_blocs.js"></script>
+    <script type="text/javascript" src="blocs&generateurs/arduino_blocs.js"></script>
+    <script type="text/javascript" src="blocs&generateurs/arduino_generateurs_cpp.js"></script>
+    <script type="text/javascript" src="blocs&generateurs/arduino_generateurs_python.js"></script>
+    <script type="text/javascript" src="blocs&generateurs/blockly_generateurs_cpp.js"></script>
+    <script type="text/javascript" src="blocs&generateurs/blockly_generateurs_python.js"></script>
+    <script type="text/javascript" src="js/typing.js"></script>
+    <script type="text/javascript" src="lang/code.js"></script>
+    <script type="text/javascript" src="js/hexlify.js"></script>
+    <script type="text/javascript" src="js/intel-hex.browser.js"></script>
+    <script type="text/javascript" src="js/ace.js"></script>
+    <script type="text/javascript" src="js/ext-language_tools.js"></script>
+
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.3.3.6.css"/>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.toggle.min.css"/>
+    <link rel="stylesheet" type="text/css" href="css/blocklino.css"/>
+    <link rel="stylesheet" type="text/css" href="css/prettify.min.css"/>
  
-	<!-- Yandex.Metrika counter --> <script type="text/javascript" > (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)}; m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)}) (window, document, "script", "https://cdn.jsdelivr.net/npm/yandex-metrica-watch/tag.js", "ym"); ym(51834545, "init", { clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true }); </script> <noscript><div><img src="https://mc.yandex.ru/watch/51834545" style="position:absolute; left:-9999px;" alt="" /></div></noscript> <!-- /Yandex.Metrika counter -->
+    <!-- Yandex.Metrika counter -->
+    <script type="text/javascript">
+        (function(m,e,t,r,i,k,a){
+            m[i]=m[i]||function(){
+                (m[i].a=m[i].a||[]).push(arguments)
+            };
+            m[i].l=1*new Date();
+            k=e.createElement(t),a=e.getElementsByTagName(t)[0];
+            k.async=1;
+            k.src=r;
+            a.parentNode.insertBefore(k,a)
+        })(window, document, "script", "https://cdn.jsdelivr.net/npm/yandex-metrica-watch/tag.js", "ym");
+        ym(51834545, "init", { clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true });
+    </script>
+    <noscript>
+        <div>
+            <img src="https://mc.yandex.ru/watch/51834545" style="position:absolute; left:-9999px;" alt="" />
+        </div>
+    </noscript>
  
+    <!-- Custom Styles -->
+    <style>
+        html { overflow: hidden; }
+        body { overflow: hidden; }
+    </style>
 </head>
- <style>
-   html { overflow:  hidden; }
-   body { overflow:  hidden; }
+<body onload="BlocklyDuino.init()">
+    <!-- Conteúdo da página -->
+    <div id="content">
+        <!-- Aqui vai o conteúdo da sua página -->
+    </div>
+
+    <!-- Div para o link -->
+    <div id="examples-container"></div>
+
+    <!-- Scripts adicionais no final do body -->
+    <script type="text/javascript" src="examples/appp.js"></script> <!-- Removido o script duplicado -->
+
+    <script type="text/javascript">
+        // Script para carregar e renderizar os exemplos
+        document.addEventListener('DOMContentLoaded', function() {
+            loadJSON(renderExamples);
+        });
+
+        // Função para carregar o JSON
+        function loadJSON(callback) {
+            fetch('examples.json')
+                .then(response => response.json())  // Corrigido de 'response.tejson()' para 'response.json()'
+                .then(data => callback(data))
+                .catch(error => console.error('Error loading JSON:', error));
+        }
+
+        // Função para renderizar os exemplos
+        function renderExamples(examples) {
+            const container = document.getElementById('examples-container');
+            examples.forEach(example => {
+                if (example.visible) {
+                    const element = document.createElement('div');
+                    if (example.is_link) {
+                        const link = document.createElement('a');
+                        link.href = example.source_url;
+                        link.textContent = example.source_text;
+                        link.target = "_blank";  // Abre o link em uma nova aba
+                        element.appendChild(link);
+                    } else {
+                        element.textContent = example.source_text;
+                        // Aqui você pode adicionar o comportamento padrão para outros exemplos
+                        // Exemplo:
+                        // element.addEventListener('click', () => {
+                        //     restartApplicationWithExample(example.source_url);
+                        // });
+                    }
+                    container.appendChild(element);
+                }
+            });
+        }
+    </script>
+</body>
+</html>
+
+
   </style>
 
 <body onload="BlocklyDuino.init()">
@@ -218,15 +298,26 @@ setTimeout(function() {
   height: 4px;
 }
 
+/* COMEÇAR INSERIR IMAGEM DA LOGO DO MENINAS NO CANTO DA TELA, AQUI DEFINE SUAS CARACTERISTICAS */
+.imagem-canto-superior{ /* Cria uma classe para definir as propriedades da imagem */
+			position: absolute; 
+			top: 40px; /* Define a distancia de pixels abaixo do topo*/
+			right: 10px;
+			width: 100px;
+			height: auto;
+			opacity: 0.8;
+		}
+
 #pre_previewArduino::-webkit-scrollbar-track {
-  background-color: #fff;
+  background-color: #804b70;
   border-radius: 3px;
 }
 
 #pre_previewArduino::-webkit-scrollbar-thumb {
    border-radius: 3px;
-   background-color:  #20666b;
+   background-color:  #804b70;
 }
+
 
 			.b16{background-image: url(media/menu/015.png);background-size: cover; width:31px; height:31px;border:1px solid #823c72;margin:0px;padding:0;outline:none;}
 			.b16:hover{background-image: url(media/menu/015.png);background-size: cover; width:31px; height:31px;border:1px solid #823c72;margin:0px;padding:0;outline:none;}
@@ -334,7 +425,7 @@ setTimeout(function() {
 		<div class="modal-content">
 		  <div class="modal-header">
 			<button type="button" class="close" data-dismiss="modal" ><span aria-hidden="true">&#215;</span></button>
-			Examples programs | Примеры программ
+			Examples programs | Exemplos de programas
 		  </div>
 		  <div class="modal-body"> 
 		  <style>
@@ -360,6 +451,13 @@ setTimeout(function() {
 		</div>
 	  </div>
 	</div>
+
+	<!--insere a imagem do meninas no canto depois de configurar suas carac na linha 221-->
+	<div class="container">
+		<!-- Conteúdo da página -->
+		<img src="media\logo_mnr.png" alt="Imagem" class="imagem-canto-superior">
+		</div>
+	
 	
 </body>
 <script type="text/javascript">	

@@ -1,6 +1,245 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <toolbox>
-   <parametre id="defaultCategories1">CAT_LOGIC,CYCLESAR,CAT_MATH,CAT_TEXT,CAT_ARDUINO_TIME,CAT_ARDUINO,ATTACHE,CAT_VARIABLESN,CAT_TAB,CAT_FUNCTIONS,CAT_ARDUINO_IN,CAT_ARDUINO_COMM_SERIAL,CAT_MODEMX,CAT_BITEPROM,CAT_MOTORI,CAT_SENSOROUTP,CAT_SENSORINPT,CAT_SENSORRECORD,CAT_INDIKATORI,CAT_INDIKATORI2,CAT_DISPLAYU,CAT_DISPLAYU_OLED,CAT_DISPLAYU_TFT,DWIN_BOX,CAT_SENSORDRUGIE,CAT_DISPLAYU_ROBO,</parametre>
+   <parametre id="defaultCategories1">CAT_MNR,CAT_LOGIC,CYCLESAR,CAT_MATH,CAT_TEXT,CAT_ARDUINO_TIME,CAT_ARDUINO,ATTACHE,CAT_VARIABLESN,CAT_TAB,CAT_FUNCTIONS,CAT_ARDUINO_IN,CAT_ARDUINO_COMM_SERIAL,CAT_MODEMX,CAT_BITEPROM,CAT_MOTORI,CAT_SENSOROUTP,CAT_SENSORINPT,CAT_SENSORRECORD,CAT_INDIKATORI,CAT_INDIKATORI2,CAT_DISPLAYU,CAT_DISPLAYU_OLED,CAT_DISPLAYU_TFT,DWIN_BOX,CAT_SENSORDRUGIE,CAT_DISPLAYU_ROBO,</parametre>
+
+<!-- Na linha 3 todas as classes dos blocos exibidas são CRIADAS, os nomes expostos são configurados na pasta lang, pra adicionar os mini projetos a classe CAT_MNR foi criada -->
+<!--Agora tem que configurar a categoria Mini projetos (Cat_MnR) e definir suas dependentes (os projetos ja existentes)-->
+
+<category name="CAT_MNR" colour= "#e639d4">
+  <!--CATEGORIA FLORES-->
+  <category name= "CAT_FLORES" colour="#e639d4">
+    <category name="CAT_ARDUINO_MNR" colour="#A5995B"> <!--CATEGORIA DE ESTRUTURA-->
+      <block type="arduino_setup"></block>
+    </category>
+    <category name="CAT_IN_OUT_MNR" colour="#A5675B"> <!--CATEGORIA DE ENTRADAS E SAÍDAS-->
+      <block type="inout_digital_write">
+        <value name="PIN"><shadow type="math_number"><field name="NUM">13</field></shadow></value>    
+        <value name="STAT"><shadow type="math_number"><field name="NUM">1</field></shadow></value>
+      </block>
+    </category>
+    <category name="CAT_TIME_MNR" colour="#5B99A5"> <!--CATEGORIA DE TEMPO-->
+      <block type="base_delay"> 
+        <value name="DELAY_TIME"><shadow type="math_number">  <field name="NUM">1000</field>  </shadow></value>    <field name="unite">m</field>  
+      </block>  
+    </category>
+  </category>
+
+    <!--CATEGORIA NIVEL DE AGUA-->
+  <category name= "CAT_NIVEL_AGUA" colour="#04cfcb">
+    <category name="CAT_LOGIC_MNR" colour="#5B80A5"> <!--CATEGORIA DE LÓGICA-->
+      <block type="controls_if"></block>
+      <block type="logic_compare_log">
+        <value name="A"><shadow type="math_number"><field name="NUM">R</field></shadow></value>
+        <value name="B"><shadow type="math_number"><field name="NUM">10</field></shadow></value>
+      </block>
+    </category>
+    <category name="CAT_ARDUINO_MNR" colour="#A5995B"> <!--CATEGORIA DE ESTRUTURA-->
+      <block type="arduino_setup"></block>
+    </category>
+    <category name="CAT_IN_OUT_MNR" colour="#A5675B"> <!--CATEGORIA DE ENTRADAS E SAIDAS-->
+      <block type="digital_read">    
+        <value name="PIN"><shadow type="math_number"><field name="NUM">2</field></shadow></value>       
+      </block>
+      <block type="inout_digital_write">
+        <value name="PIN"><shadow type="math_number"><field name="NUM">13</field></shadow></value>    
+        <value name="STAT"><shadow type="math_number"><field name="NUM">1</field></shadow></value>
+      </block>
+    </category>
+  </category>
+
+    <!--CATEGORIA UMIDADE-->
+  <category name= "CAT_UMIDADE" colour="#d67327">
+  <category name="CAT_LOGIC_MNR" colour="#5B80A5"> <!--CATEGORIA DE LÓGICA-->
+    <block type="controls_if"></block>
+    <block type="logic_compare_log">
+      <value name="A"><shadow type="math_number"><field name="NUM">R</field></shadow></value>
+      <value name="B"><shadow type="math_number"><field name="NUM">10</field></shadow></value>
+    </block>
+  
+    <block type="logic_operation">
+      <value name="A"><shadow type="math_number"><field name="NUM">X</field></shadow></value>
+      <value name="B"><shadow type="math_number"><field name="NUM">Y</field></shadow></value>
+    </block>
+    </category>
+
+    <category name="CAT_ARDUINO_MNR" colour="#A5995B"> <!--CATEGORIA DE ESTRUTURA-->
+      <block type="arduino_setup"></block>
+    </category>
+
+    <category name="CAT_IN_OUT_MNR" colour="#A5675B"> <!--CATEGORIA DE ENTRADAS E SAIDAS-->
+    <block type="inout_analog_read"></block>
+    <block type="inout_digital_write">
+      <value name="PIN"><shadow type="math_number"><field name="NUM">13</field></shadow></value>    
+      <value name="STAT"><shadow type="math_number"><field name="NUM">1</field></shadow></value>
+    </block>
+    </category>
+    <category name="CAT_FUNCTIONS_MNR" custom="PROCEDURE" colour="#995BA5"> </category> 
+  </category>
+
+  <!--CATEGORIA HORTA-->
+  <category name= "CAT_HORTA" colour="#b7e6aa">
+    <category name="CAT_LOGIC_MNR" colour="#5B80A5"> 
+      <block type="controls_if"></block>
+      <block type="logic_compare_log">
+        <value name="A"><shadow type="math_number"><field name="NUM">R</field></shadow></value>
+        <value name="B"><shadow type="math_number"><field name="NUM">10</field></shadow></value>
+      </block>
+    </category>
+    <category name="CAT_ARDUINO_MNR" colour="#A5995B">
+      <block type="arduino_setup"></block>
+    </category>
+    <category name="CAT_IN_OUT_MNR" colour="#A5675B">
+      <block type="digital_read">    
+        <value name="PIN"><shadow type="math_number"><field name="NUM">2</field></shadow></value>       
+      </block>
+      <block type="inout_digital_write">
+        <value name="PIN"><shadow type="math_number"><field name="NUM">13</field></shadow></value>    
+        <value name="STAT"><shadow type="math_number"><field name="NUM">1</field></shadow></value>
+      </block>
+    </category>
+    <category name="CAT_TIME_MNR" colour="#5B99A5">
+      <block type="base_delay"> 
+        <value name="DELAY_TIME"><shadow type="math_number">  <field name="NUM">1000</field>  </shadow></value>    <field name="unite">m</field>  
+      </block>  
+    </category>
+  </category>
+
+
+    <!--CATEGORIA VENTILADOR-->
+  <category name= "CAT_VENTILADOR" colour="#9627d6">
+
+    <category name="CAT_LOGIC_MNR" colour="#5B80A5"> <!--CATEGORIA DE FUNÇÕES-->
+      <block type="controls_if"></block>
+      <block type="logic_compare_log">
+        <value name="A"><shadow type="math_number"><field name="NUM">R</field></shadow></value>
+        <value name="B"><shadow type="math_number"><field name="NUM">10</field></shadow></value>
+      </block>
+    </category>
+
+    <category name="CAT_ARDUINO_MNR" colour="#A5995B"> <!--CATEGORIA DE ESTRUTURA-->
+      <block type="base_define"></block>
+      <block type="arduino_setup"></block>
+    </category>
+
+    <category name="CAT_TEXT_MNR" colour="#5BA58C"> <!--CATEGORIA DE TEXTO-->
+      <block type="text_char"> <field name="TEXT">ArduBlock</field>   </block>
+    </category>
+
+    <category name="CAT_VARIABLES_MNR" custom="VARIABLE" colour="#A55B80"></category>
+
+    <category name="CAT_COMM_SERIAL_MNR" colour="#5BA599"> <!--CATEGORIA DE MONITOR DE PORTA-->
+      <block type="serial_init"> <field name="SPEED">9600</field> </block>  
+      <block type="serial_read"></block>
+      <block type="serial_available"></block>
+    </category>
+
+    <category name="CAT_IN_OUT_MNR" colour="#A5675B"> <!--CATEGORIA DE ENTRADA E SAIDA-->
+      <block type="inout_digital_write">
+        <value name="PIN"><shadow type="math_number"><field name="NUM">13</field></shadow></value>    
+        <value name="STAT"><shadow type="math_number"><field name="NUM">1</field></shadow></value>
+      </block>
+    </category>
+
+  </category>
+
+  <!--CATEGORIA CARRINHO BLUETOOTH-->
+  <category name= "CAT_CAR_BLUETOOTH" colour="#092294">
+    <category name="CAT_LOGIC_MNR" colour="#5B80A5"> <!--CATEGORIA DE LÓGICA-->
+      <block type="controls_if"></block>
+      <block type="logic_compare_log">
+        <value name="A"><shadow type="math_number"><field name="NUM">R</field></shadow></value>
+        <value name="B"><shadow type="math_number"><field name="NUM">10</field></shadow></value>
+      </block>
+    </category>
+    <category name="CAT_ARDUINO_MNR" colour="#A5995B"> <!--CATEGORIA DE ESTRUTURA-->
+      <block type="base_define"></block>
+      <block type="arduino_setup"></block>
+    </category>
+    <category name="CAT_TEXT_MNR" colour="#5BA58C">
+      <block type="text_char"> <field name="TEXT">ArduBlock</field>   </block>
+    </category>
+    <category name="CAT_COMM_SERIAL_MNR" colour="#5BA599"> <!--CATEGORIA DE MONITOR DE PORTA-->
+      <block type="serial_init"> <field name="SPEED">9600</field> </block> 
+      <block type="serial_read"></block>
+      <block type="serial_available"></block>
+    </category>
+    <category name="CAT_IN_OUT_MNR" colour="#A5675B"> 
+      <block type="inout_digital_write">
+        <value name="PIN"><shadow type="math_number"><field name="NUM">13</field></shadow></value>    
+        <value name="STAT"><shadow type="math_number"><field name="NUM">1</field></shadow></value>
+      </block>
+    </category>
+  <category name="CAT_VARIABLES_MNR" custom="VARIABLE" colour="#A55B80"></category>
+  
+    
+  </category>
+
+   <!--CATEGORIA LIXEIRA ULTRASSONICA-->
+  <category name= "CAT_LIXEIRA" colour="#c21b5b">
+    <category name="CAT_LOGIC_MNR" colour="#5B80A5">
+      <block type="controls_if"></block>
+      <block type="logic_compare_log">
+        <value name="A"><shadow type="math_number"><field name="NUM">R</field></shadow></value>
+        <value name="B"><shadow type="math_number"><field name="NUM">10</field></shadow></value>
+      </block>
+    </category>
+    <category name="CAT_ARDUINO_MNR" colour="#A5995B">  
+      <block type="arduino_setup"></block>
+    </category>
+    <category name="CAT_IN_OUT_MNR" colour="#A5675B"> 
+      <block type="inout_digital_write">
+        <value name="PIN"><shadow type="math_number"><field name="NUM">13</field></shadow></value>    
+        <value name="STAT"><shadow type="math_number"><field name="NUM">1</field></shadow></value>
+      </block>
+    </category>
+    <category name="CAT_SENSOR_IN_MNR" colour="#5662A0">
+      <block type="ultrasonic_ranger_sensor">  <value name="PIN_TRIG"><shadow type="math_number"><field name="NUM">11</field></shadow></value>   <value name="PIN_ECHO"><shadow type="math_number"><field name="NUM">12</field></shadow></value> </block>
+    </category>
+    <category name="CAT_MOTOR_MNR" colour="#8CA55B">
+      <block type="stepservo_continuos_move"> 
+        <value name="PIN"> <shadow type="math_number"><field name="NUM">4</field></shadow> </value>
+        <value name="PIN_GR"> <shadow type="math_number"><field name="NUM">255</field></shadow> </value>
+        <value name="SpeedServo"> <shadow type="math_number"> <field name="NUM">180</field> </shadow> </value> 
+      </block>
+    </category>
+    <category name="CAT_TIME_MNR" colour="#5B99A5">
+      <block type="base_delay"> 
+        <value name="DELAY_TIME"><shadow type="math_number">  <field name="NUM">1000</field>  </shadow></value>    <field name="unite">m</field>  
+      </block>  
+    </category>
+  </category>
+
+  <!--CATEGORIA CARRINHO ULTRASSONICO-->
+  <category name= "CAT_CAR_ULTRASSOM" colour="#faeb46">
+    <category name="CAT_LOGIC_MNR" colour="#5B80A5"> 
+      <block type="controls_if"></block>
+      <block type="logic_compare_log">
+        <value name="A"><shadow type="math_number"><field name="NUM">R</field></shadow></value>
+        <value name="B"><shadow type="math_number"><field name="NUM">10</field></shadow></value>
+      </block>
+    </category>
+    <category name="CAT_ARDUINO_MNR" colour="#A5995B">  
+      <block type="arduino_setup"></block>
+    </category>
+    <category name="CAT_IN_OUT_MNR" colour="#A5675B"> 
+      <block type="inout_digital_write">
+        <value name="PIN"><shadow type="math_number"><field name="NUM">13</field></shadow></value>    
+        <value name="STAT"><shadow type="math_number"><field name="NUM">1</field></shadow></value>
+      </block>
+    </category>
+    <category name="CAT_SENSOR_IN_MNR" colour="#5662A0">
+      <block type="ultrasonic_ranger_sensor">  <value name="PIN_TRIG"><shadow type="math_number"><field name="NUM">11</field></shadow></value>   <value name="PIN_ECHO"><shadow type="math_number"><field name="NUM">12</field></shadow></value> </block>
+    </category>
+    <category name="CAT_TIME_MNR" colour="#5B99A5">
+      <block type="base_delay"> 
+        <value name="DELAY_TIME"><shadow type="math_number">  <field name="NUM">1000</field>  </shadow></value>    <field name="unite">m</field>  
+      </block>  
+    </category>
+  </category>
+
+</category>
+
+
 
  <category name="CAT_DISPLAYU_ROBO" colour="#936299">  <!--роботы-->  
  
@@ -28,6 +267,8 @@
       <block type="otto_sound"></block>
  
   </category>
+
+
    
   <category name="CAT_DISPLAYU_TTL" colour="#10760e">  <!--UART Дисплей-->    
   <block type="soft_init_ttl"> <field name="PIN1">2</field> <field name="PIN2">3</field> <field name="SPEED">115200</field> </block>
