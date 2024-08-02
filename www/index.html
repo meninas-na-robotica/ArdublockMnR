@@ -298,15 +298,39 @@ setTimeout(function() {
   height: 4px;
 }
 
+.container {
+	display: flex;
+    align-items: center;
+    padding: 10px; /* Adiciona algum espaço ao redor dos botões */
+}
+
 /* COMEÇAR INSERIR IMAGEM DA LOGO DO MENINAS NO CANTO DA TELA, AQUI DEFINE SUAS CARACTERISTICAS */
 .imagem-canto-superior{ /* Cria uma classe para definir as propriedades da imagem */
-			position: absolute; 
-			top: 40px; /* Define a distancia de pixels abaixo do topo*/
-			right: 10px;
-			width: 100px;
-			height: auto;
-			opacity: 0.8;
-		}
+	position: absolute; 
+	top: 40px; /* Define a distancia de pixels abaixo do topo*/
+	right: 10px;
+	width: 100px;
+	height: auto;
+	opacity: 0.8;
+}
+
+.botao-link {
+    position: absolute;
+    top: 40px; /* Ajuste a posição conforme necessário */
+    right: 10px; /* Ajuste a posição conforme necessário */
+    width: 80px; /* Ajuste o tamanho conforme necessário */
+    height: 30px; /* Ajuste o tamanho conforme necessário */
+    background-color: #962a8d00; /* Cor de fundo do botão */
+    color: rgba(255, 255, 255, 0); /* Cor do texto do botão */
+    text-align: center;
+    line-height: 0px; /* Alinha o texto verticalmente */
+    text-decoration: none;
+    border-radius: 0px; /* Bordas arredondadas do botão */
+    font-size: 0px; /* Tamanho da fonte do texto */
+}
+
+
+
 
 #pre_previewArduino::-webkit-scrollbar-track {
   background-color: #804b70;
@@ -457,7 +481,13 @@ setTimeout(function() {
 		<!-- Conteúdo da página -->
 		<img src="media\logo_mnr.png" alt="Imagem" class="imagem-canto-superior">
 		</div>
-	
+
+		  
+		  <div class="container">
+			<a href="http://ardublock.ru/wiki/" target="_blank">
+				<img src="media/logo_mnr.png" alt="Imagem" class="imagem-canto-superior">
+			</a>
+		</div>	
 	
 </body>
 <script type="text/javascript">	
