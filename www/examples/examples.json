@@ -19,7 +19,15 @@
 {"source_url": "018.ardublock","source_text": "018 - Click counter. | Contador de cliques.","visible": true},
 {"source_url": "019.ardublock","source_text": "019 - Control the servomotor. | Controle o servomotor.","visible": true}, 
 {"source_url": "020.ardublock","source_text": "020 - Pantograph. | Pantógrafo.","visible": true},
-{"source_url": "021.ardublock","source_text": "Copo de Flores","visible": true},
+{"source_url": "022.ardublock","source_text": "MnR- Copo de Flores.","visible": true},
+{"source_url": "023.ardublock","source_text": "MnR- Monitorando Nível.","visible": true},
+{"source_url": "024.ardublock","source_text": "MnR- Monitorando Umidade.","visible": true},
+{"source_url": "025.ardublock","source_text": "MnR- Horta Automatizada.","visible": true},
+{"source_url": "026.ardublock","source_text": "MnR- Ventilador.","visible": true},
+{"source_url": "027.ardublock","source_text": "MnR- Carrinho bluetooth.","visible": true},
+{"source_url": "028.ardublock","source_text": "MnR- Lixeira.","visible": true},
+{"source_url": "029.ardublock","source_text": "MnR- Carrinho Ultrassônico.","visible": true},
+{"source_url": "021.ardublock","source_text": "Mais exemplos disponíveis no wiki Ardublock, link para acesso na logo do meninas!","visible": true},
 {}
    ]
 
