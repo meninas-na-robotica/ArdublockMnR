@@ -1,0 +1,260 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <toolbox>toolbox_arduino_all</toolbox>
+  <block type="arduino_setup" id="p7G(@!tu$1*N{E^#kQ|F" x="-116" y="388">
+    <statement name="MyLoop">
+      <block type="controls_if" id="^_$H5]:#n=;8X7*b!{)O">
+        <value name="IF0">
+          <block type="logic_operation" id="uzk~vspuSOeEE]`vi3.v">
+            <field name="OP">and</field>
+            <value name="A">
+              <shadow type="math_number" id="8:ldco21E=CjbrWtzVa8">
+                <field name="NUM">X</field>
+              </shadow>
+              <block type="logic_compare_log" id="h1yDOCjLYc[B?wyun/UN">
+                <field name="OP">GT</field>
+                <value name="A">
+                  <shadow type="math_number" id="H]4R.m$.6_;ZqZR8Fv.!">
+                    <field name="NUM">R</field>
+                  </shadow>
+                  <block type="inout_analog_read" id="FSTqMkghc,3YJ-iJv[Nz">
+                    <field name="broche">A0</field>
+                  </block>
+                </value>
+                <value name="B">
+                  <shadow type="math_number" id="};=`vnUlqcn`xzP8aBW.">
+                    <field name="NUM">0</field>
+                  </shadow>
+                </value>
+              </block>
+            </value>
+            <value name="B">
+              <shadow type="math_number" id="OfG{_;gFsU6]@rqiVJ(w">
+                <field name="NUM">Y</field>
+              </shadow>
+              <block type="logic_compare_log" id="f,Qp5#PWO)2z[G3uUL#N">
+                <field name="OP">LT</field>
+                <value name="A">
+                  <shadow type="math_number" id="H]4R.m$.6_;ZqZR8Fv.!">
+                    <field name="NUM">R</field>
+                  </shadow>
+                  <block type="inout_analog_read" id=":6/D9vqqgaNOCLN5c(M)">
+                    <field name="broche">A0</field>
+                  </block>
+                </value>
+                <value name="B">
+                  <shadow type="math_number" id="V#YJWRJT)iBntpHr)K1R">
+                    <field name="NUM">600</field>
+                  </shadow>
+                </value>
+              </block>
+            </value>
+          </block>
+        </value>
+        <statement name="DO0">
+          <block type="inout_digital_write" id="BN3Y9NpB?U7o3R~lpHK1">
+            <value name="PIN">
+              <shadow type="math_number" id="@c^MPM|69pjha/dFm{t4">
+                <field name="NUM">4</field>
+              </shadow>
+            </value>
+            <value name="STAT">
+              <shadow type="math_number" id="p,Gxv@M,_{P8|BVTk*=/">
+                <field name="NUM">1</field>
+              </shadow>
+            </value>
+            <next>
+              <block type="procedures_callnoreturn" id="`p,OyMV9pai2wXN#3bgL">
+                <mutation name="clear"></mutation>
+              </block>
+            </next>
+          </block>
+        </statement>
+        <next>
+          <block type="controls_if" id="h^5u.,j?e^7_IbX0=}SE">
+            <value name="IF0">
+              <block type="logic_operation" id="W;]f,gU!pVV]VdT1yIEo">
+                <field name="OP">and</field>
+                <value name="A">
+                  <shadow type="math_number" id="8:ldco21E=CjbrWtzVa8">
+                    <field name="NUM">X</field>
+                  </shadow>
+                  <block type="logic_compare_log" id="-SRv)bmdOcot][X2H,)F">
+                    <field name="OP">GT</field>
+                    <value name="A">
+                      <shadow type="math_number" id="H]4R.m$.6_;ZqZR8Fv.!">
+                        <field name="NUM">R</field>
+                      </shadow>
+                      <block type="inout_analog_read" id="_^[ccJSUj~9F!Gj0w|?l">
+                        <field name="broche">A0</field>
+                      </block>
+                    </value>
+                    <value name="B">
+                      <shadow type="math_number" id="g2A%JojI}tbZ;+uJ{ZlJ">
+                        <field name="NUM">600</field>
+                      </shadow>
+                    </value>
+                  </block>
+                </value>
+                <value name="B">
+                  <shadow type="math_number" id="OfG{_;gFsU6]@rqiVJ(w">
+                    <field name="NUM">Y</field>
+                  </shadow>
+                  <block type="logic_compare_log" id="vGS0l0|HbC!8~}ldX0]r">
+                    <field name="OP">LT</field>
+                    <value name="A">
+                      <shadow type="math_number" id="H]4R.m$.6_;ZqZR8Fv.!">
+                        <field name="NUM">R</field>
+                      </shadow>
+                      <block type="inout_analog_read" id="BI/8|f0^nhOam}f$.B3,">
+                        <field name="broche">A0</field>
+                      </block>
+                    </value>
+                    <value name="B">
+                      <shadow type="math_number" id="}#,3tP|2$TyukL;Rh{:%">
+                        <field name="NUM">800</field>
+                      </shadow>
+                    </value>
+                  </block>
+                </value>
+              </block>
+            </value>
+            <statement name="DO0">
+              <block type="inout_digital_write" id="!p5W}qi-MBr;fy_jk]^$">
+                <value name="PIN">
+                  <shadow type="math_number" id="en({%~+dHDi)PmOAc6#T">
+                    <field name="NUM">5</field>
+                  </shadow>
+                </value>
+                <value name="STAT">
+                  <shadow type="math_number" id="k#L3lUOjIGFj*yc%{ejc">
+                    <field name="NUM">1</field>
+                  </shadow>
+                </value>
+                <next>
+                  <block type="procedures_callnoreturn" id="7*+HkpJ!)e$WvGIM7F88">
+                    <mutation name="clear"></mutation>
+                  </block>
+                </next>
+              </block>
+            </statement>
+            <next>
+              <block type="controls_if" id="HFzTwf$f[N1rS1WWB0MU">
+                <value name="IF0">
+                  <block type="logic_operation" id="T_!kroIs.4EHMcKM^Bkl">
+                    <field name="OP">and</field>
+                    <value name="A">
+                      <shadow type="math_number" id="8:ldco21E=CjbrWtzVa8">
+                        <field name="NUM">X</field>
+                      </shadow>
+                      <block type="logic_compare_log" id="S2=t|x*i9D_{}vz!L*,{">
+                        <field name="OP">GT</field>
+                        <value name="A">
+                          <shadow type="math_number" id="H]4R.m$.6_;ZqZR8Fv.!">
+                            <field name="NUM">R</field>
+                          </shadow>
+                          <block type="inout_analog_read" id="ctRtP4RhVcg;sap}OI#l">
+                            <field name="broche">A0</field>
+                          </block>
+                        </value>
+                        <value name="B">
+                          <shadow type="math_number" id="2_!E*f.EvDZNe$-dNWO-">
+                            <field name="NUM">800</field>
+                          </shadow>
+                        </value>
+                      </block>
+                    </value>
+                    <value name="B">
+                      <shadow type="math_number" id="OfG{_;gFsU6]@rqiVJ(w">
+                        <field name="NUM">Y</field>
+                      </shadow>
+                      <block type="logic_compare_log" id="*$C,w@Y.:-yT_b`DR]O2">
+                        <field name="OP">LT</field>
+                        <value name="A">
+                          <shadow type="math_number" id="H]4R.m$.6_;ZqZR8Fv.!">
+                            <field name="NUM">R</field>
+                          </shadow>
+                          <block type="inout_analog_read" id="7tE/uY4QBItS*B9Qywn%">
+                            <field name="broche">A0</field>
+                          </block>
+                        </value>
+                        <value name="B">
+                          <shadow type="math_number" id="/[ngcYpt[LPktD!M=vi(">
+                            <field name="NUM">1024</field>
+                          </shadow>
+                        </value>
+                      </block>
+                    </value>
+                  </block>
+                </value>
+                <statement name="DO0">
+                  <block type="inout_digital_write" id="9VNvajpfQSC6(:#A_Z(|">
+                    <value name="PIN">
+                      <shadow type="math_number" id="iH39zPUTs:XQ5{J,q#E`">
+                        <field name="NUM">6</field>
+                      </shadow>
+                    </value>
+                    <value name="STAT">
+                      <shadow type="math_number" id="$F~Ev,WW.9U~m5gycAcp">
+                        <field name="NUM">1</field>
+                      </shadow>
+                    </value>
+                    <next>
+                      <block type="procedures_callnoreturn" id=";Lg[%uECa{xyg}:GMr)S">
+                        <mutation name="clear"></mutation>
+                      </block>
+                    </next>
+                  </block>
+                </statement>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </statement>
+  </block>
+  <block type="procedures_defnoreturn" id="?Y_nk[BR-Ys3fHn|LEr4" x="-111" y="885">
+    <field name="NAME">clear</field>
+    <statement name="STACK">
+      <block type="inout_digital_write" id="eM:z@S.S::EBOT!:ri:,">
+        <value name="PIN">
+          <shadow type="math_number" id="qzswNf9u!4g;76P^Ij-n">
+            <field name="NUM">4</field>
+          </shadow>
+        </value>
+        <value name="STAT">
+          <shadow type="math_number" id="XhK0)NJAr6IF]Cv2uX+2">
+            <field name="NUM">0</field>
+          </shadow>
+        </value>
+        <next>
+          <block type="inout_digital_write" id="E$YLG#985DJk=J?Wx+dc">
+            <value name="PIN">
+              <shadow type="math_number" id="jRoVs7GM8L6v9FwWSitT">
+                <field name="NUM">5</field>
+              </shadow>
+            </value>
+            <value name="STAT">
+              <shadow type="math_number" id="sOG,#FZxc9@Kq$UVSnpj">
+                <field name="NUM">0</field>
+              </shadow>
+            </value>
+            <next>
+              <block type="inout_digital_write" id="m@|)~jak7TbpwKlJ%U?l">
+                <value name="PIN">
+                  <shadow type="math_number" id="vGIpcyE1Kgb=NJGYGCmn">
+                    <field name="NUM">6</field>
+                  </shadow>
+                </value>
+                <value name="STAT">
+                  <shadow type="math_number" id="4tf|Xd5VZ*Jm3^JPm$oo">
+                    <field name="NUM">0</field>
+                  </shadow>
+                </value>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </statement>
+  </block>
+</xml>
