@@ -20,6 +20,8 @@
 {"source_url": "019.ardublock","source_text": "019 - Control the servomotor. | Controle o servomotor.","visible": true}, 
 {"source_url": "020.ardublock","source_text": "020 - Pantograph. | Pantógrafo.","visible": true},
 {"source_url": "022.ardublock","source_text": "MnR- Copo de Flores.","visible": true},
+{"source_url": "030.ardublock","source_text": "MnR- Cofre com rfid.","visible": true},
+{"source_url": "031.ardublock","source_text": "MnR- Cofre com Botões.","visible": true},
 {"source_url": "023.ardublock","source_text": "MnR- Monitorando Nível.","visible": true},
 {"source_url": "024.ardublock","source_text": "MnR- Monitorando Umidade.","visible": true},
 {"source_url": "025.ardublock","source_text": "MnR- Horta Automatizada.","visible": true},
